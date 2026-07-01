@@ -1,0 +1,26 @@
+{
+  "case": "Drinkup — form control accessibility",
+  "type": "Web app",
+  "target": "https://github.com/johnnymackcodes/drinkup",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Form controls / status feedback",
+      "severity": "warning",
+      "issue": "Range/number controls, preset choices, decorative emoji and share-copy feedback needed better accessible names, state and status announcements.",
+      "fix": "Add accessible names/value text, expose choices as radio groups with keyboard support, hide decorative emoji and announce copied share links politely.",
+      "wcag": [
+        "1.1.1 Non-text Content",
+        "2.1.1 Keyboard",
+        "4.1.2 Name, Role, Value",
+        "4.1.3 Status Messages"
+      ],
+      "source": [
+        "https://github.com/johnnymackcodes/drinkup/pull/7"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/johnnymackcodes/drinkup/pull/7"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case": "smrt-svelte — form feedback relationships",
+  "type": "Web component library / Svelte",
+  "target": "https://github.com/happyvertical/smrt",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Form primitives",
+      "severity": "critical",
+      "issue": "Core form primitives exposed dynamic supporting/validation text visually, but not always through a stable programmatic relationship.",
+      "fix": "Generate stable ids, connect controls with aria-describedby, set aria-invalid and announce validation/status changes.",
+      "wcag": [
+        "3.3.1 Error Identification",
+        "3.3.2 Labels or Instructions",
+        "4.1.2 Name, Role, Value",
+        "4.1.3 Status Messages"
+      ],
+      "source": [
+        "https://github.com/happyvertical/smrt/pull/1440"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/happyvertical/smrt/pull/1440"
+  ]
+}

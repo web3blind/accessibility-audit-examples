@@ -1,0 +1,26 @@
+{
+  "case": "Vaadin Web Components — non-modal overlays",
+  "type": "Web components / TypeScript",
+  "target": "https://github.com/vaadin/web-components",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Focus management / status announcement",
+      "severity": "warning",
+      "issue": "Non-modal dialog/popover behavior can trap keyboard focus or fail to announce useful context when an overlay opens.",
+      "fix": "Disable focus trapping for non-modal overlays and add polite announcement behavior for popovers without moving focus unexpectedly.",
+      "wcag": [
+        "2.1.1 Keyboard",
+        "2.1.2 No Keyboard Trap",
+        "2.4.3 Focus Order",
+        "4.1.3 Status Messages"
+      ],
+      "source": [
+        "https://github.com/vaadin/web-components/pull/11984"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/vaadin/web-components/pull/11984"
+  ]
+}

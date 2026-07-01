@@ -1,0 +1,25 @@
+{
+  "case": "Nextcloud iOS — share extension folder picker",
+  "type": "Mobile / iOS",
+  "target": "https://github.com/nextcloud/ios",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Mobile screen-reader labels",
+      "severity": "warning",
+      "issue": "Folder rows in the share extension target-folder picker needed explicit VoiceOver labels and actionable semantics.",
+      "fix": "Set accessibility labels/value text from visible folder metadata and expose folder rows as actionable elements.",
+      "wcag": [
+        "1.1.1 Non-text Content",
+        "2.4.6 Headings and Labels",
+        "4.1.2 Name, Role, Value"
+      ],
+      "source": [
+        "https://github.com/nextcloud/ios/pull/4111"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/nextcloud/ios/pull/4111"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "case": "La Suite numérique UI Kit — dropdown menu semantics",
+  "type": "Web component library / React",
+  "target": "https://github.com/suitenumerique/ui-kit",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Dropdown/menu semantics",
+      "severity": "warning",
+      "issue": "Dropdown triggers and menu items did not consistently expose expanded/open state, relationships, checked/selected state and visible keyboard focus.",
+      "fix": "Add aria-haspopup, aria-expanded, aria-controls, stable menu ids, selected/checked semantics and clearer focus styling across several focused PRs.",
+      "wcag": [
+        "2.1.1 Keyboard",
+        "2.4.7 Focus Visible",
+        "4.1.2 Name, Role, Value"
+      ],
+      "source": [
+        "https://github.com/suitenumerique/ui-kit/pull/226",
+        "https://github.com/suitenumerique/ui-kit/pull/227",
+        "https://github.com/suitenumerique/ui-kit/pull/228",
+        "https://github.com/suitenumerique/ui-kit/pull/229"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/suitenumerique/ui-kit/pull/226",
+    "https://github.com/suitenumerique/ui-kit/pull/227",
+    "https://github.com/suitenumerique/ui-kit/pull/228",
+    "https://github.com/suitenumerique/ui-kit/pull/229"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "case": "Artigen — action sheet focus",
+  "type": "Web app / React",
+  "target": "https://github.com/MukundaKatta/artigen",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Dialog focus management",
+      "severity": "warning",
+      "issue": "Action sheet/dialog opening did not reliably move accessibility focus to a meaningful title.",
+      "fix": "Move accessibility focus to the action sheet title, announce the title/fallback label and preserve modal/menu semantics.",
+      "wcag": [
+        "2.4.3 Focus Order",
+        "4.1.2 Name, Role, Value"
+      ],
+      "source": [
+        "https://github.com/MukundaKatta/artigen/pull/455"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/MukundaKatta/artigen/pull/455"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "case": "Codeversehub Website — skip link",
+  "type": "Website / React",
+  "target": "https://github.com/TheCodeVerseHub/Codeversehub-Website",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Bypass navigation",
+      "severity": "warning",
+      "issue": "Keyboard and screen-reader users lacked a direct way to bypass repeated navigation and jump to the main content.",
+      "fix": "Add a focus-visible skip link and main-content targets on key pages.",
+      "wcag": [
+        "2.4.1 Bypass Blocks",
+        "2.1.1 Keyboard"
+      ],
+      "source": [
+        "https://github.com/TheCodeVerseHub/Codeversehub-Website/pull/15"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/TheCodeVerseHub/Codeversehub-Website/pull/15"
+  ]
+}

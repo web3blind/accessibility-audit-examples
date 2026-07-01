@@ -1,0 +1,24 @@
+{
+  "case": "Ride The Lightning — auth feedback announcements",
+  "type": "Web app / Angular",
+  "target": "https://github.com/Ride-The-Lightning/RTL",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Dynamic status announcements",
+      "severity": "warning",
+      "issue": "Loading, validation and auth/session feedback could appear visually without being announced to screen-reader users.",
+      "fix": "Use live-region semantics for initial loading, assertive auth validation/login errors and polite logout/session messages.",
+      "wcag": [
+        "3.3.1 Error Identification",
+        "4.1.3 Status Messages"
+      ],
+      "source": [
+        "https://github.com/Ride-The-Lightning/RTL/pull/1603"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/Ride-The-Lightning/RTL/pull/1603"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "case": "Hermes Desktop — accessibility semantics",
+  "type": "Desktop / Electron-like React surfaces",
+  "target": "https://github.com/NousResearch/hermes-agent",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Desktop UI semantics",
+      "severity": "warning",
+      "issue": "Desktop chat surfaces had repeated semantic gaps around autocomplete popovers, dialogs and controls.",
+      "fix": "Add ARIA combobox/listbox relationships, improve dialog/control semantics, and document the static audit findings.",
+      "wcag": [
+        "2.1.1 Keyboard",
+        "2.4.3 Focus Order",
+        "4.1.2 Name, Role, Value"
+      ],
+      "source": [
+        "https://github.com/NousResearch/hermes-agent/pull/49413"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/NousResearch/hermes-agent/pull/49413"
+  ]
+}

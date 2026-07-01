@@ -1,0 +1,25 @@
+{
+  "case": "Quasar Framework — QInput/QField error semantics",
+  "type": "Web component library / Vue",
+  "target": "https://github.com/quasarframework/quasar",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Form error semantics",
+      "severity": "critical",
+      "issue": "Rendered field errors were visible but not programmatically connected to invalid controls.",
+      "fix": "Add stable error ids and expose aria-invalid, aria-errormessage and aria-describedby for native QInput controls in error state.",
+      "wcag": [
+        "3.3.1 Error Identification",
+        "3.3.3 Error Suggestion",
+        "4.1.2 Name, Role, Value"
+      ],
+      "source": [
+        "https://github.com/quasarframework/quasar/pull/18323"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/quasarframework/quasar/pull/18323"
+  ]
+}

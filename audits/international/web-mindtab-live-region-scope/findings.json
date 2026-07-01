@@ -1,0 +1,23 @@
+{
+  "case": "MindTab — writing assistant live region scope",
+  "type": "Web app / writing assistant",
+  "target": "https://github.com/AetherAssembly/MindTab",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Live region noise",
+      "severity": "warning",
+      "issue": "The whole writing assistant panel was marked as a polite live region, which could cause screen readers to announce unrelated updates while users typed.",
+      "fix": "Scope live announcements to the suggestions container and add a regression test for the live-region markup.",
+      "wcag": [
+        "4.1.3 Status Messages"
+      ],
+      "source": [
+        "https://github.com/AetherAssembly/MindTab/pull/19"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/AetherAssembly/MindTab/pull/19"
+  ]
+}

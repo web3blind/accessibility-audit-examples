@@ -1,0 +1,25 @@
+{
+  "case": "La Suite numérique Docs — export select focus stop",
+  "type": "Web app / document editor",
+  "target": "https://github.com/suitenumerique/docs",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Keyboard focus noise",
+      "severity": "warning",
+      "issue": "A decorative export-format select arrow was reachable as a separate keyboard/screen-reader focus stop.",
+      "fix": "Remove the decorative arrow from tab order and hide it from assistive technologies.",
+      "wcag": [
+        "2.1.1 Keyboard",
+        "2.4.3 Focus Order",
+        "4.1.2 Name, Role, Value"
+      ],
+      "source": [
+        "https://github.com/suitenumerique/docs/pull/2366"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/suitenumerique/docs/pull/2366"
+  ]
+}

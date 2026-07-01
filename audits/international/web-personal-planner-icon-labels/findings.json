@@ -1,0 +1,25 @@
+{
+  "case": "Personal Planner — icon-only control labels",
+  "type": "Web app",
+  "target": "https://github.com/TemaDeveloper/personal_planner",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Accessible names / toggle state",
+      "severity": "critical",
+      "issue": "Icon-only, emoji, color-swatch and filled-square controls could be unnamed or unclear for screen-reader users.",
+      "fix": "Add accessible names to visual-only controls and aria-pressed to toggle-like buttons.",
+      "wcag": [
+        "1.1.1 Non-text Content",
+        "2.4.6 Headings and Labels",
+        "4.1.2 Name, Role, Value"
+      ],
+      "source": [
+        "https://github.com/TemaDeveloper/personal_planner/pull/28"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/TemaDeveloper/personal_planner/pull/28"
+  ]
+}

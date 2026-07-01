@@ -1,0 +1,25 @@
+{
+  "case": "WindoM — clickable widgets keyboard access",
+  "type": "Web app / React",
+  "target": "https://github.com/YehudaBriskman/WindoM",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Clickable custom controls",
+      "severity": "critical",
+      "issue": "Several clickable visual widgets were implemented in ways that reduced keyboard accessibility and state announcement clarity.",
+      "fix": "Convert controls to buttons where appropriate, make thumbnails keyboard-activatable and restore search engine picker state labeling.",
+      "wcag": [
+        "2.1.1 Keyboard",
+        "2.4.7 Focus Visible",
+        "4.1.2 Name, Role, Value"
+      ],
+      "source": [
+        "https://github.com/YehudaBriskman/WindoM/pull/271"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/YehudaBriskman/WindoM/pull/271"
+  ]
+}

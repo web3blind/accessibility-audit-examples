@@ -1,0 +1,27 @@
+{
+  "case": "WindoM — GlassSelect keyboard navigation",
+  "type": "Web app / React",
+  "target": "https://github.com/YehudaBriskman/WindoM",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Custom select keyboard support",
+      "severity": "critical",
+      "issue": "Custom GlassSelect control needed keyboard navigation, active option tracking and predictable close/select focus behavior.",
+      "fix": "Add Arrow/Home/End/Enter/Space/Escape handling, active option state, aria-activedescendant and focus return behavior with regression tests.",
+      "wcag": [
+        "2.1.1 Keyboard",
+        "2.4.3 Focus Order",
+        "4.1.2 Name, Role, Value"
+      ],
+      "source": [
+        "https://github.com/YehudaBriskman/WindoM/pull/269",
+        "https://github.com/YehudaBriskman/WindoM/pull/270"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/YehudaBriskman/WindoM/pull/269",
+    "https://github.com/YehudaBriskman/WindoM/pull/270"
+  ]
+}

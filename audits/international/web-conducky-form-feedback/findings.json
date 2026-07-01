@@ -1,0 +1,24 @@
+{
+  "case": "Conducky — form feedback announcements",
+  "type": "Web app",
+  "target": "https://github.com/mattstratton/conducky",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Form feedback announcements",
+      "severity": "warning",
+      "issue": "Visible form validation/server feedback could appear without an announcement path for assistive technologies.",
+      "fix": "Add alert/status roles for validation, registration error and success feedback.",
+      "wcag": [
+        "3.3.1 Error Identification",
+        "4.1.3 Status Messages"
+      ],
+      "source": [
+        "https://github.com/mattstratton/conducky/pull/459"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/mattstratton/conducky/pull/459"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "case": "IBM MCP Context Forge — admin UI modal and validation semantics",
+  "type": "Web app / Admin UI",
+  "target": "https://github.com/IBM/mcp-context-forge",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Modals / form validation",
+      "severity": "critical",
+      "issue": "Shared admin UI modal helpers and form validation patterns were visually available but not reliably exposed through dialog semantics and field-error relationships.",
+      "fix": "Add dialog labeling/focus behavior and connect invalid fields to visible validation messages with aria-invalid and aria-describedby.",
+      "wcag": [
+        "2.1.1 Keyboard",
+        "2.4.3 Focus Order",
+        "3.3.1 Error Identification",
+        "3.3.2 Labels or Instructions",
+        "4.1.2 Name, Role, Value"
+      ],
+      "source": [
+        "https://github.com/IBM/mcp-context-forge/pull/5331"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/IBM/mcp-context-forge/pull/5331"
+  ]
+}

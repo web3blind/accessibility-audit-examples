@@ -1,0 +1,24 @@
+{
+  "case": "DevTrack — visible focus styles",
+  "type": "Web app",
+  "target": "https://github.com/Priyanshu-byte-coder/devtrack",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Focus visibility",
+      "severity": "critical",
+      "issue": "Some buttons, links and controls had weak or missing visible keyboard focus indication.",
+      "fix": "Add focus ring tokens and global :focus-visible styling with forced-colors support.",
+      "wcag": [
+        "2.4.7 Focus Visible",
+        "2.4.13 Focus Appearance"
+      ],
+      "source": [
+        "https://github.com/Priyanshu-byte-coder/devtrack/pull/1114"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/Priyanshu-byte-coder/devtrack/pull/1114"
+  ]
+}
