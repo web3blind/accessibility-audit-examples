@@ -2,20 +2,26 @@
 
 Репозиторий с примерами агентного аудита доступности реальных интерфейсов: desktop, mobile и web.
 
-Цель — показать типовые проблемы, способы проверки и возможные исправления на реальных русскоязычных/российских проектах, без формата «доски позора».
+Цель — показать типовые проблемы, способы проверки и возможные исправления на реальных проектах, без формата «доски позора».
 
-## Cases
+## Collections
 
-| Case | Type | Target | Report | Summary | Upstream |
-|---|---|---|---|---|---|
-| School Table | Desktop / PyQt5 | https://github.com/EDeev/school_table | [audit](audits/desktop-school-table/audit.md) | [summary](audits/desktop-school-table/summary.md) | [PR #1](https://github.com/EDeev/school_table/pull/1) |
-| TastyTales | Mobile / Flutter | https://gitflic.ru/project/tastytales/tastytales | [audit](audits/mobile-tastytales/audit.md) | [summary](audits/mobile-tastytales/summary.md) | [issue draft](audits/mobile-tastytales/issue-draft.md) |
-| Культура.РФ | Website | https://www.culture.ru/ | [audit](audits/web-culture-ru/audit.md) | [summary](audits/web-culture-ru/summary.md) | suggested fixes |
+- [Russian / русскоязычные и российские примеры](audits/russian/README.md)
+- [International / другие проекты](audits/international/README.md)
+- [Weekly accessibility quests](weekly/README.md)
+
+## Current cases
+
+| Collection | Case | Type | Target | Report | Summary | Upstream |
+|---|---|---|---|---|---|---|
+| Russian | School Table | Desktop / PyQt5 | https://github.com/EDeev/school_table | [audit](audits/russian/desktop-school-table/audit.md) | [summary](audits/russian/desktop-school-table/summary.md) | [PR #1](https://github.com/EDeev/school_table/pull/1) |
+| Russian | TastyTales | Mobile / Flutter | https://gitflic.ru/project/tastytales/tastytales | [audit](audits/russian/mobile-tastytales/audit.md) | [summary](audits/russian/mobile-tastytales/summary.md) | [issue draft](audits/russian/mobile-tastytales/issue-draft.md) |
+| Russian | Культура.РФ | Website | https://www.culture.ru/ | [audit](audits/russian/web-culture-ru/audit.md) | [summary](audits/russian/web-culture-ru/summary.md) | [contact draft](audits/russian/web-culture-ru/contact-draft.md) |
 
 ## Method
 
 Аудиты выполнены агентом по доступному коду, HTML/CSS/JS, структуре интерфейса и публичным страницам. Проверяется всё, что можно проверить агентно по доступным источникам. Ручное тестирование со скринридером или физическим устройством — отдельный этап и не смешивается с этими отчётами.
 
-## Status
+## Weekly format
 
-Generated on 2026-07-01. Upstream PR/issue links will be added after review of the generated reports and minimal patches.
+В течение недели собираются кандидаты для аудита доступности. В воскресенье выбирается один или несколько кейсов, публикуется короткая сводка в канал, а полный аудит, evidence и ссылки на PR/issue/contact drafts сохраняются здесь.
