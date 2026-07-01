@@ -9,7 +9,7 @@
 | Case | Type | Target | Report | Summary | Upstream |
 |---|---|---|---|---|---|
 | School Table | Desktop / PyQt5 | https://github.com/EDeev/school_table | [audit](audits/desktop-school-table/audit.md) | [summary](audits/desktop-school-table/summary.md) | [PR #1](https://github.com/EDeev/school_table/pull/1) |
-| TastyTales | Mobile / Flutter | https://gitflic.ru/project/tastytales/tastytales | [audit](audits/mobile-tastytales/audit.md) | [summary](audits/mobile-tastytales/summary.md) | issue/[PR #1](https://github.com/EDeev/school_table/pull/1) |
+| TastyTales | Mobile / Flutter | https://gitflic.ru/project/tastytales/tastytales | [audit](audits/mobile-tastytales/audit.md) | [summary](audits/mobile-tastytales/summary.md) | [issue draft](audits/mobile-tastytales/issue-draft.md) |
 | Культура.РФ | Website | https://www.culture.ru/ | [audit](audits/web-culture-ru/audit.md) | [summary](audits/web-culture-ru/summary.md) | suggested fixes |
 
 ## Method
