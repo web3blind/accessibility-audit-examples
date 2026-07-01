@@ -1,8 +1,8 @@
 {
   "target": {
-    "Project": "tastytales/TastyTales",
-    "Type": "mobile / Flutter",
-    "Source": "https://gitflic.ru/project/tastytales/tastytales"
+    "project": "tastytales/TastyTales",
+    "type": "mobile / Flutter",
+    "source": "https://gitflic.ru/project/tastytales/tastytales"
   },
   "score": 85,
   "grade": "B",
@@ -14,24 +14,24 @@
   "findings": [
     {
       "severity": "critical",
-      "category": "Flutter semantics",
-      "issue": "GestureDetector is used without any Semantics wrappers in the app code",
+      "category": "семантика Flutter",
+      "issue": "GestureDetector используется без обёрток Semantics",
       "evidence": "GestureDetector: 10; Semantics: 0",
-      "criterion": "WCAG 4.1.2 / mobile screen reader semantics",
-      "fix": "Wrap custom tap targets in Semantics(label: ..., button: true, child: ...), or replace with semantic controls such as ElevatedButton/IconButton/ListTile where appropriate."
+      "criterion": "WCAG 4.1.2 / семантика мобильного скринридера",
+      "fix": "Обернуть кастомные области нажатия в Semantics(label: ..., button: true, child: ...) или заменить на ElevatedButton/IconButton/ListTile."
     },
     {
       "severity": "warning",
-      "category": "Controls",
-      "issue": "Icon-only controls may lack accessible names",
+      "category": "контролы",
+      "issue": "Иконки и кнопки только с иконками могут не иметь доступных имён",
       "evidence": "Icon widgets: 13; Tooltip: 0; Semantics: 0",
       "criterion": "WCAG 4.1.2",
-      "fix": "Use IconButton tooltip, Semantics labels, or visible text for icon-only actions."
+      "fix": "Добавить tooltip для IconButton, подписи через Semantics или видимый текст для действий только с иконкой."
     }
   ],
   "passed_checks": [
-    "Text fields use InputDecoration/labelText patterns in the source.",
-    "Source inspected: 18 Dart files under Flutter app code.",
-    "Project has Flutter structure (`pubspec.yaml`, `lib/`, Android/iOS folders) suitable for static mobile audit."
+    "Поля ввода используют паттерны InputDecoration/labelText.",
+    "Проверены 18 Dart-файлов в коде Flutter-приложения.",
+    "В проекте есть структура Flutter (`pubspec.yaml`, `lib/`, Android/iOS-папки), подходящая для статического мобильного аудита."
   ]
 }

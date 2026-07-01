@@ -1,9 +1,9 @@
-# Russian accessibility audit examples
+# Российские примеры аудита доступности
 
-Русскоязычные и российские примеры агентного аудита доступности.
+Русскоязычные и российские примеры агентного аудита доступности. В этом разделе отчёты написаны по-русски; технические имена API, атрибуты HTML/ARIA и названия компонентов оставлены как в исходном коде.
 
-| Case | Type | Target | Report | Summary | Upstream |
+| Кейс | Тип | Объект проверки | Полный отчёт | Краткая сводка | В исходный проект / следующий шаг |
 |---|---|---|---|---|---|
-| School Table | Desktop / PyQt5 | https://github.com/EDeev/school_table | [audit](desktop-school-table/audit.md) | [summary](desktop-school-table/summary.md) | [PR #1](https://github.com/EDeev/school_table/pull/1) |
-| TastyTales | Mobile / Flutter | https://gitflic.ru/project/tastytales/tastytales | [audit](mobile-tastytales/audit.md) | [summary](mobile-tastytales/summary.md) | [issue draft](mobile-tastytales/issue-draft.md) |
-| Культура.РФ | Website | https://www.culture.ru/ | [audit](web-culture-ru/audit.md) | [summary](web-culture-ru/summary.md) | [contact draft](web-culture-ru/contact-draft.md) |
+| School Table | Desktop / PyQt5 | https://github.com/EDeev/school_table | [аудит](desktop-school-table/audit.md) | [сводка](desktop-school-table/summary.md) | [PR #1](https://github.com/EDeev/school_table/pull/1) |
+| TastyTales | Mobile / Flutter | https://gitflic.ru/project/tastytales/tastytales | [аудит](mobile-tastytales/audit.md) | [сводка](mobile-tastytales/summary.md) | [черновик задачи](mobile-tastytales/issue-draft.md) |
+| Культура.РФ | Сайт | https://www.culture.ru/ | [аудит](web-culture-ru/audit.md) | [сводка](web-culture-ru/summary.md) | [черновик обращения](web-culture-ru/contact-draft.md) |

@@ -1,22 +1,22 @@
-# Accessibility improvement proposal for TastyTales
+# Черновик предложения по доступности для TastyTales
 
-## Summary
+## Кратко
 
-Static Flutter accessibility audit found custom tap targets implemented with `GestureDetector` without matching `Semantics` wrappers, and icon-only controls that may not expose accessible names to TalkBack/VoiceOver.
+Статический аудит Flutter-кода показал, что в приложении есть кастомные области нажатия через `GestureDetector`, но не найдены соответствующие обёртки `Semantics`. Также есть риск, что элементы только с иконками не получают понятные доступные имена для TalkBack/VoiceOver.
 
-## Evidence
+## Доказательства
 
-- `lib/screens/loginScreen.dart`: tappable navigation areas use `GestureDetector`.
-- `lib/screens/profileScreen.dart`: tappable profile actions use `GestureDetector`.
-- `lib/screens/myrecipesScreen.dart`: recipe action uses `GestureDetector`.
-- Project-wide static scan: `GestureDetector` is present, but `Semantics(` / `semanticLabel` were not found in `lib/`.
+- `lib/screens/loginScreen.dart`: области навигации по нажатию используют `GestureDetector`.
+- `lib/screens/profileScreen.dart`: действия в профиле используют `GestureDetector`.
+- `lib/screens/myrecipesScreen.dart`: действие с рецептом использует `GestureDetector`.
+- Поиск по проекту: `GestureDetector` найден, а `Semantics(` / `semanticLabel` в `lib/` не найдены.
 
-## Suggested fix
+## Предлагаемое исправление
 
-- Prefer semantic widgets (`IconButton`, `ElevatedButton`, `ListTile`) when possible.
-- Where `GestureDetector` is needed, wrap the tappable area in `Semantics(label: ..., button: true, child: ...)`.
-- Add `tooltip` to icon buttons or provide `Semantics` labels for icon-only controls.
+- По возможности использовать семантические виджеты: `IconButton`, `ElevatedButton`, `ListTile`.
+- Если `GestureDetector` действительно нужен, оборачивать область нажатия в `Semantics(label: ..., button: true, child: ...)`.
+- Для кнопок только с иконкой добавлять `tooltip` или явную подпись через `Semantics`.
 
-## Validation
+## Проверка
 
-This proposal is based on an automated source accessibility audit. Manual TalkBack/VoiceOver verification can be done as a follow-up stage.
+Это предложение основано на агентном аудите исходного кода. Ручную проверку TalkBack/VoiceOver можно провести отдельным последующим этапом.

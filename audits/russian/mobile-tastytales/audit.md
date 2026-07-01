@@ -1,69 +1,61 @@
-# Accessibility audit: TastyTales mobile app
+# Аудит доступности: TastyTales
 
-## Target
+## Объект проверки
 
-- **Project:** tastytales/TastyTales
-- **Type:** mobile / Flutter
-- **Source:** https://gitflic.ru/project/tastytales/tastytales
-- **Date:** 2026-07-01
-- **Standards:** WCAG 2.1 AA principles, Mobile accessibility checklist, Flutter Semantics patterns
+- **Проект:** tastytales/TastyTales
+- **Тип:** mobile / Flutter
+- **Источник:** https://gitflic.ru/project/tastytales/tastytales
+- **Дата:** 2026-07-01
+- **Стандарты и ориентиры:** WCAG 2.1 AA, чек-лист мобильной доступности, практики Flutter `Semantics`.
 
-## Scope
+## Область проверки
 
-Полный агентный аудит доступности по доступному коду, HTML/CSS/JS, структуре интерфейса и публичным страницам/ресурсам. Ручное тестирование со скринридером или физическим устройством относится к отдельному этапу и не смешивается с этим отчётом.
+Выполнен агентный аудит доступности по доступному исходному коду и структуре Flutter-приложения. Ручная проверка TalkBack/VoiceOver на устройстве относится к отдельному этапу и не смешивается с этим отчётом.
 
-## Executive summary
+## Краткий итог
 
-- **Score:** 85/100
-- **Grade:** B
-- **Critical issues:** 1
-- **Warnings:** 1
-- **Informational:** 0
+- **Оценка:** 85/100
+- **Уровень:** B
+- **Критичные проблемы:** 1
+- **Предупреждения:** 1
+- **Информационные замечания:** 0
 
-Flutter-приложение рецептов: нейтральный пример для демонстрации, как агент ищет риски в виджетах, формах, изображениях и кастомных tap targets.
+Flutter-приложение рецептов — нейтральный пример того, как агент ищет риски в виджетах, формах, изображениях и кастомных областях нажатия.
 
-## Critical issues
+## Критичные проблемы
 
-### 1. GestureDetector is used without any Semantics wrappers in the app code
+### 1. `GestureDetector` используется без обёрток `Semantics`
 
-- **Category:** Flutter semantics
+- **Категория:** семантика Flutter
+- **Критерий:** WCAG 4.1.2 / семантика мобильного скринридера
+- **Доказательство:** `GestureDetector: 10; Semantics: 0`
+- **Рекомендация:** оборачивать кастомные области нажатия в `Semantics(label: ..., button: true, child: ...)` или заменять их на семантические контролы вроде `ElevatedButton`, `IconButton`, `ListTile`.
 
-- **Criterion:** WCAG 4.1.2 / mobile screen reader semantics
+## Предупреждения
 
-- **Evidence:** `GestureDetector: 10; Semantics: 0`
+### 1. Иконки и кнопки только с иконками могут не иметь доступных имён
 
-- **Suggested fix:** Wrap custom tap targets in Semantics(label: ..., button: true, child: ...), or replace with semantic controls such as ElevatedButton/IconButton/ListTile where appropriate.
+- **Категория:** контролы
+- **Критерий:** WCAG 4.1.2
+- **Доказательство:** `Icon widgets: 13; Tooltip: 0; Semantics: 0`
+- **Рекомендация:** использовать `IconButton tooltip`, подписи через `Semantics` или видимый текст для действий, представленных только иконкой.
 
+## Информационные замечания
 
-## Warnings
+Информационных замечаний в этой группе нет.
 
-### 1. Icon-only controls may lack accessible names
+## Что проверено и выглядит нормально
 
-- **Category:** Controls
+- Поля ввода используют паттерны `InputDecoration` / `labelText`.
+- Проверены 18 Dart-файлов в коде Flutter-приложения.
+- В проекте есть структура Flutter (`pubspec.yaml`, `lib/`, Android/iOS-папки), подходящая для статического мобильного аудита.
 
-- **Criterion:** WCAG 4.1.2
+## Первые исправления
 
-- **Evidence:** `Icon widgets: 13; Tooltip: 0; Semantics: 0`
+1. Обернуть кастомные области нажатия в `Semantics(label: ..., button: true, child: ...)` или заменить на семантические контролы.
+2. Добавить `tooltip`, `Semantics`-подписи или видимый текст для действий, представленных только иконкой.
 
-- **Suggested fix:** Use IconButton tooltip, Semantics labels, or visible text for icon-only actions.
+## Upstream
 
-
-## Informational findings
-
-No findings in this severity group.
-
-## Passed checks
-
-- Text fields use InputDecoration/labelText patterns in the source.
-- Source inspected: 18 Dart files under Flutter app code.
-- Project has Flutter structure (`pubspec.yaml`, `lib/`, Android/iOS folders) suitable for static mobile audit.
-
-## Suggested first fixes
-
-1. Wrap custom tap targets in Semantics(label: ..., button: true, child: ...), or replace with semantic controls such as ElevatedButton/IconButton/ListTile where appropriate.
-2. Use IconButton tooltip, Semantics labels, or visible text for icon-only actions.
-
-## Upstream work
-
-- Repository: https://gitflic.ru/project/tastytales/tastytales
-- Suggested next action: open GitFlic issue or PR with Semantics/label improvements after reviewing exact screens.
+- Репозиторий: https://gitflic.ru/project/tastytales/tastytales
+- Следующий шаг: открыть задачу или PR на GitFlic после ручного просмотра конкретных экранов и мест применения `GestureDetector`.

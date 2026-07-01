@@ -1,24 +1,28 @@
-# Summary: School Table desktop app
+# Краткая сводка: School Table
 
-- **Target:** EDeev/school_table
-- **Type:** desktop / PyQt5
-- **Score:** 88/100 (B)
-- **Critical:** 0
-- **Warnings:** 2
-- **Info:** 2
+- **Объект:** EDeev/school_table
+- **Тип:** desktop / PyQt5
+- **Оценка:** 88/100 (B)
+- **Критичные проблемы:** 0
+- **Предупреждения:** 2
+- **Информационные замечания:** 2
 
-## Top findings
+## Главные находки
 
-1. **warning:** No explicit accessible names are set for widgets — Add setAccessibleName() to icon-only, ambiguous, or dynamically created controls; keep visible text for normal QPushButton/QLabel controls.
-2. **info:** No accessible descriptions are provided — Add setAccessibleDescription() for fields or buttons whose purpose is not fully clear from their visible label.
-3. **warning:** Form labels are not programmatically associated with inputs — Use QLabel.setBuddy(inputWidget) for form labels, or set accessibleName on each field.
-4. **info:** No explicit tab order is declared — If the UI order is non-trivial, define setTabOrder() for forms and table/editing workflows.
+1. **Предупреждение:** у виджетов не заданы явные доступные имена.  
+   Что сделать: добавить `setAccessibleName()` для иконок, неоднозначных элементов и динамически созданных контролов. Для обычных `QPushButton`/`QLabel` видимый текст можно сохранить как основной источник имени.
+2. **Информационно:** нет доступных описаний.  
+   Что сделать: добавить `setAccessibleDescription()` для полей и кнопок, назначение которых не полностью понятно из видимой подписи.
+3. **Предупреждение:** подписи форм не связаны программно с полями ввода.  
+   Что сделать: использовать `QLabel.setBuddy(inputWidget)` или задать `accessibleName` для каждого поля.
+4. **Информационно:** не задан явный порядок обхода клавиатурой.  
+   Что сделать: если порядок интерфейса неочевиден, добавить `setTabOrder()` для форм, таблиц и сценариев редактирования.
 
-## Public framing
+## Рамка примера
 
-Это пример агентного аудита: проверяется всё, что доступно по коду/структуре/публичным страницам. Ручная проверка скринридером — отдельный этап.
+Это пример агентного аудита: проверяется всё, что доступно по коду и структуре интерфейса. Ручная проверка скринридером — отдельный этап.
 
 ## Upstream
 
 - PR: https://github.com/EDeev/school_table/pull/1
-- Status: opened
+- Статус: открыт

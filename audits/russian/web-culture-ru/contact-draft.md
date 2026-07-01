@@ -1,19 +1,19 @@
-# Accessibility recommendations draft for Культура.РФ
+# Черновик обращения по доступности для Культура.РФ
 
-This is a compact message draft based on the multi-page automated audit in `audit.md`.
+Это компактный черновик сообщения на основе многостраничного агентного аудита из `audit.md`.
 
-## Summary
+## Кратко
 
-The audit crawled 45 public pages across home, materials, news, live, museums, literature, architecture, afisha, cinema, music and special-project pages.
+Аудит прошёл по 45 публичным страницам: главная, материалы, новости, трансляции, музеи, литература, архитектура, афиша, кино, музыка и спецпроекты.
 
-## First recommendations
+## Первые рекомендации
 
-1. Add exactly one meaningful `h1` on landing/category pages where the static HTML currently exposes no `h1`.
-2. Review image alternatives on live/media pages: some image tags are emitted without `alt`; informative images need meaningful text, decorative images should use `alt=""` intentionally.
-3. Check form controls on the homepage/search surfaces and associate them with visible labels or `aria-labelledby`.
-4. Add or verify a visible-on-focus skip link to main content.
-5. Avoid generic link text such as “читать” where the accessible name is unclear outside the surrounding visual context.
+1. Добавить ровно один содержательный `h1` на страницах-разделах и посадочных страницах, где статический HTML сейчас не показывает `h1`.
+2. Проверить текстовые альтернативы изображений на страницах с трансляциями и медиа: информативным изображениям нужны осмысленные описания, декоративным — намеренный `alt=""`.
+3. Проверить элементы форм на главной и поисковых/каталожных поверхностях: связать поля с видимыми подписями или `aria-labelledby`.
+4. Добавить или проверить ссылку перехода к основному содержимому, видимую при фокусе.
+5. Избегать коротких ссылок вроде «читать», если доступное имя ссылки непонятно вне визуального контекста.
 
-## Evidence
+## Доказательства
 
-See `evidence.md` for the crawled page list and `audit.md` for examples.
+Список проверенных страниц — в `evidence.md`, примеры проблем — в `audit.md`.

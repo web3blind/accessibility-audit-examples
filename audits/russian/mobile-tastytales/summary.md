@@ -1,17 +1,19 @@
-# Summary: TastyTales mobile app
+# Краткая сводка: TastyTales
 
-- **Target:** tastytales/TastyTales
-- **Type:** mobile / Flutter
-- **Score:** 85/100 (B)
-- **Critical:** 1
-- **Warnings:** 1
-- **Info:** 0
+- **Объект:** tastytales/TastyTales
+- **Тип:** mobile / Flutter
+- **Оценка:** 85/100 (B)
+- **Критичные проблемы:** 1
+- **Предупреждения:** 1
+- **Информационные замечания:** 0
 
-## Top findings
+## Главные находки
 
-1. **critical:** GestureDetector is used without any Semantics wrappers in the app code — Wrap custom tap targets in Semantics(label: ..., button: true, child: ...), or replace with semantic controls such as ElevatedButton/IconButton/ListTile where appropriate.
-2. **warning:** Icon-only controls may lack accessible names — Use IconButton tooltip, Semantics labels, or visible text for icon-only actions.
+1. **Критично:** в коде приложения используется `GestureDetector`, но не найдены соответствующие обёртки `Semantics`.  
+   Что сделать: оборачивать кастомные области нажатия в `Semantics(label: ..., button: true, child: ...)` или заменять их на семантические контролы вроде `ElevatedButton`, `IconButton`, `ListTile`.
+2. **Предупреждение:** иконки и кнопки только с иконками могут не иметь доступных имён.  
+   Что сделать: добавлять `tooltip` для `IconButton`, подписи через `Semantics` или видимый текст рядом с действием.
 
-## Public framing
+## Рамка примера
 
-Это пример агентного аудита: проверяется всё, что доступно по коду/структуре/публичным страницам. Ручная проверка скринридером — отдельный этап.
+Это пример агентного аудита: проверяется всё, что доступно по коду и структуре интерфейса. Ручная проверка TalkBack/VoiceOver — отдельный этап.

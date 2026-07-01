@@ -1,89 +1,75 @@
-# Accessibility audit: School Table desktop app
+# Аудит доступности: School Table
 
-## Target
+## Объект проверки
 
-- **Project:** EDeev/school_table
-- **Type:** desktop / PyQt5
-- **Source:** https://github.com/EDeev/school_table
-- **Date:** 2026-07-01
-- **Standards:** WCAG 2.1 AA principles, Desktop accessibility checklist, Qt/PyQt accessible naming patterns
+- **Проект:** EDeev/school_table
+- **Тип:** desktop / PyQt5
+- **Источник:** https://github.com/EDeev/school_table
+- **Дата:** 2026-07-01
+- **Стандарты и ориентиры:** WCAG 2.1 AA, чек-лист desktop-доступности, практики доступных имён в Qt/PyQt.
 
-## Scope
+## Область проверки
 
-Полный агентный аудит доступности по доступному коду, HTML/CSS/JS, структуре интерфейса и публичным страницам/ресурсам. Ручное тестирование со скринридером или физическим устройством относится к отдельному этапу и не смешивается с этим отчётом.
+Выполнен агентный аудит доступности по доступному коду и структуре интерфейса. Ручная проверка скринридером или физическим устройством относится к отдельному этапу и не смешивается с этим отчётом.
 
-## Executive summary
+## Краткий итог
 
-- **Score:** 88/100
-- **Grade:** B
-- **Critical issues:** 0
-- **Warnings:** 2
-- **Informational:** 2
+- **Оценка:** 88/100
+- **Уровень:** B
+- **Критичные проблемы:** 0
+- **Предупреждения:** 2
+- **Информационные замечания:** 2
 
-Небольшое PyQt-приложение: хороший кандидат для первого upstream PR с доступными именами, связью label→field и явным tab order там, где это нужно.
+Небольшое PyQt-приложение — хороший кандидат для первого PR в исходный проект: можно точечно улучшить доступные имена, связь «подпись → поле» и явный порядок обхода клавиатурой там, где он нужен.
 
-## Critical issues
+## Критичные проблемы
 
-No findings in this severity group.
+Критичных проблем в рамках статической проверки не найдено.
 
-## Warnings
+## Предупреждения
 
-### 1. No explicit accessible names are set for widgets
+### 1. У виджетов не заданы явные доступные имена
 
-- **Category:** Desktop / PyQt
+- **Категория:** desktop / PyQt
+- **Критерий:** WCAG 4.1.2 / имена элементов в desktop UIA/AT-SPI
+- **Доказательство:** `setAccessibleName occurrences: 0`
+- **Рекомендация:** добавить `setAccessibleName()` для иконок, неоднозначных элементов и динамически созданных контролов. Для обычных `QPushButton`/`QLabel` видимый текст можно оставить основным именем.
 
-- **Criterion:** WCAG 4.1.2 / desktop UIA/AT-SPI naming
+### 2. Подписи форм не связаны программно с полями ввода
 
-- **Evidence:** `setAccessibleName occurrences: 0`
+- **Категория:** формы
+- **Критерий:** WCAG 1.3.1 / 3.3.2
+- **Доказательство:** `QLabel.setBuddy occurrences: 0`
+- **Рекомендация:** использовать `QLabel.setBuddy(inputWidget)` для подписей форм или задать `accessibleName` для каждого поля.
 
-- **Suggested fix:** Add setAccessibleName() to icon-only, ambiguous, or dynamically created controls; keep visible text for normal QPushButton/QLabel controls.
+## Информационные замечания
 
-### 2. Form labels are not programmatically associated with inputs
+### 1. Нет доступных описаний
 
-- **Category:** Forms
+- **Категория:** desktop / PyQt
+- **Критерий:** WCAG 3.3.2 / 4.1.2
+- **Доказательство:** `setAccessibleDescription occurrences: 0`
+- **Рекомендация:** добавить `setAccessibleDescription()` для полей и кнопок, назначение которых не полностью понятно из видимой подписи.
 
-- **Criterion:** WCAG 1.3.1 / 3.3.2
+### 2. Не задан явный порядок обхода клавиатурой
 
-- **Evidence:** `QLabel.setBuddy occurrences: 0`
+- **Категория:** клавиатурная навигация
+- **Критерий:** WCAG 2.4.3
+- **Доказательство:** `setTabOrder occurrences: 0`
+- **Рекомендация:** если порядок интерфейса неочевиден, задать `setTabOrder()` для форм, таблиц и сценариев редактирования.
 
-- **Suggested fix:** Use QLabel.setBuddy(inputWidget) for form labels, or set accessibleName on each field.
+## Что проверено и выглядит нормально
 
+- Проверены 1 Python-файл и 1 файл Qt Designer `.ui`.
+- Таблицы расписания и заметок найдены и включены в область desktop-аудита.
 
-## Informational findings
+## Первые исправления
 
-### 1. No accessible descriptions are provided
+1. Добавить `setAccessibleName()` для неоднозначных или динамически созданных контролов.
+2. Связать подписи и поля через `QLabel.setBuddy(inputWidget)` или задать `accessibleName` для каждого поля.
 
-- **Category:** Desktop / PyQt
+## Upstream
 
-- **Criterion:** WCAG 3.3.2 / 4.1.2
-
-- **Evidence:** `setAccessibleDescription occurrences: 0`
-
-- **Suggested fix:** Add setAccessibleDescription() for fields or buttons whose purpose is not fully clear from their visible label.
-
-### 2. No explicit tab order is declared
-
-- **Category:** Keyboard navigation
-
-- **Criterion:** WCAG 2.4.3
-
-- **Evidence:** `setTabOrder occurrences: 0`
-
-- **Suggested fix:** If the UI order is non-trivial, define setTabOrder() for forms and table/editing workflows.
-
-
-## Passed checks
-
-- Source inspected: 1 Python files and 1 Qt Designer .ui files.
-- Table widgets were identified and included in the desktop audit surface.
-
-## Suggested first fixes
-
-1. Add setAccessibleName() to icon-only, ambiguous, or dynamically created controls; keep visible text for normal QPushButton/QLabel controls.
-2. Use QLabel.setBuddy(inputWidget) for form labels, or set accessibleName on each field.
-
-## Upstream work
-
-- Repository: https://github.com/EDeev/school_table
+- Репозиторий: https://github.com/EDeev/school_table
 - PR: https://github.com/EDeev/school_table/pull/1
-- Status: opened
+- Статус: открыт

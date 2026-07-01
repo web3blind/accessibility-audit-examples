@@ -1,20 +1,25 @@
-# Summary: Культура.РФ website
+# Краткая сводка: Культура.РФ
 
-- **Target:** Культура.РФ
-- **Type:** website / public URL
-- **Score:** 59/100 (F)
-- **Critical:** 2
-- **Warnings:** 4
-- **Info:** 1
+- **Объект:** Культура.РФ
+- **Тип:** сайт / публичный URL
+- **Оценка:** 59/100 (F)
+- **Критичные проблемы:** 2
+- **Предупреждения:** 4
+- **Информационные замечания:** 1
 
-## Top findings
+## Главные находки
 
-1. **warning:** Page should have exactly one H1 — Use one H1 for the page topic and lower heading levels for sections.
-2. **warning:** Images have generic or empty-looking alt text — Replace generic alt text with content-specific descriptions, or mark decorative images intentionally.
-3. **info:** Skip link was not detected by static scan — Add a visible-on-focus skip link to the main content if absent.
-4. **warning:** Some form controls may not have labels — Associate every input/select/textarea with a visible label or aria-labelledby.
-5. **critical:** HTML document language is missing — Add `<html lang="ru">` or the correct page language.
+1. **Предупреждение:** на части страниц нет ровно одного `h1`.  
+   Что сделать: использовать один `h1` для основной темы страницы, а разделы размечать более низкими уровнями заголовков.
+2. **Предупреждение:** у части изображений подозрительно пустые или слишком общие `alt`.  
+   Что сделать: давать содержательные описания информативным изображениям, а декоративные изображения помечать намеренно через `alt=""`.
+3. **Информационно:** статический скан не нашёл ссылку перехода к основному содержимому.  
+   Что сделать: добавить или проверить ссылку «к основному содержимому», видимую при фокусе.
+4. **Предупреждение:** у некоторых элементов форм могут отсутствовать подписи.  
+   Что сделать: связать каждый `input`, `select`, `textarea` с видимой подписью или `aria-labelledby`.
+5. **Критично:** на одной из проверенных страниц отсутствует язык HTML-документа.  
+   Что сделать: добавить `<html lang="ru">` или другой корректный язык страницы.
 
-## Public framing
+## Рамка примера
 
-Это пример агентного аудита: проверяется всё, что доступно по коду/структуре/публичным страницам. Ручная проверка скринридером — отдельный этап.
+Это пример агентного аудита: проверяется всё, что доступно по коду, HTML/CSS/JS и публичной структуре страниц. Ручная проверка скринридером — отдельный этап.
