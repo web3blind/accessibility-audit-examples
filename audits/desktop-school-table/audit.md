@@ -85,4 +85,5 @@ No findings in this severity group.
 ## Upstream work
 
 - Repository: https://github.com/EDeev/school_table
-- Suggested next action: prepare a small PR after manually reviewing widget names in `main.py` and `rasp.ui`.
+- PR: https://github.com/EDeev/school_table/pull/1
+- Status: opened
