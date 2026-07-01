@@ -1,0 +1,37 @@
+{
+  "target": {
+    "Project": "tastytales/TastyTales",
+    "Type": "mobile / Flutter",
+    "Source": "https://gitflic.ru/project/tastytales/tastytales"
+  },
+  "score": 85,
+  "grade": "B",
+  "counts": {
+    "critical": 1,
+    "warning": 1,
+    "info": 0
+  },
+  "findings": [
+    {
+      "severity": "critical",
+      "category": "Flutter semantics",
+      "issue": "GestureDetector is used without any Semantics wrappers in the app code",
+      "evidence": "GestureDetector: 10; Semantics: 0",
+      "criterion": "WCAG 4.1.2 / mobile screen reader semantics",
+      "fix": "Wrap custom tap targets in Semantics(label: ..., button: true, child: ...), or replace with semantic controls such as ElevatedButton/IconButton/ListTile where appropriate."
+    },
+    {
+      "severity": "warning",
+      "category": "Controls",
+      "issue": "Icon-only controls may lack accessible names",
+      "evidence": "Icon widgets: 13; Tooltip: 0; Semantics: 0",
+      "criterion": "WCAG 4.1.2",
+      "fix": "Use IconButton tooltip, Semantics labels, or visible text for icon-only actions."
+    }
+  ],
+  "passed_checks": [
+    "Text fields use InputDecoration/labelText patterns in the source.",
+    "Source inspected: 18 Dart files under Flutter app code.",
+    "Project has Flutter structure (`pubspec.yaml`, `lib/`, Android/iOS folders) suitable for static mobile audit."
+  ]
+}
