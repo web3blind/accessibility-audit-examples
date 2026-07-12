@@ -15,11 +15,13 @@
         "4.1.2 Name, Role, Value"
       ],
       "source": [
+        "https://github.com/amnezia-vpn/amnezia-client/issues/2778",
         "https://github.com/amnezia-vpn/amnezia-client/pull/2779"
       ]
     }
   ],
   "upstream": [
+    "https://github.com/amnezia-vpn/amnezia-client/issues/2778",
     "https://github.com/amnezia-vpn/amnezia-client/pull/2779"
   ]
 }

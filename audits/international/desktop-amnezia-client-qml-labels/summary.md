@@ -6,7 +6,7 @@
 
 ## Main issue
 
-Core QML controls and icon-only actions could be unnamed or unclear for NVDA/TalkBack users.
+Core QML controls and icon-only actions could be unnamed or unclear for NVDA/TalkBack users. Issue #2778 also documents core-screen and split-tunneling interaction problems: server selection, neighboring action buttons, tabs, delete actions, search-field behavior and checkbox activation.
 
 ## Fix/proposal
 
@@ -18,4 +18,5 @@ This is a concrete accessibility example from an upstream contribution: the visi
 
 ## Status
 
+- https://github.com/amnezia-vpn/amnezia-client/issues/2778
 - https://github.com/amnezia-vpn/amnezia-client/pull/2779 — open, created 2026-06-27

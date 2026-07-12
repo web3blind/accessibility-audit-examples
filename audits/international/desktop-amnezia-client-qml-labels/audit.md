@@ -10,7 +10,7 @@ This public example documents a real upstream accessibility contribution by `web
 
 ## Finding
 
-- **Issue:** Core QML controls and icon-only actions could be unnamed or unclear for NVDA/TalkBack users.
+- **Issue:** Core QML controls and icon-only actions could be unnamed or unclear for NVDA/TalkBack users; issue #2778 also documents core-screen and split-tunneling interaction problems.
 - **Impact:** keyboard and/or assistive-technology users may miss state, labels, errors, status changes or reachable controls that are visually apparent.
 - **Related criteria:** 1.1.1 Non-text Content, 2.4.6 Headings and Labels, 4.1.2 Name, Role, Value
 
@@ -20,6 +20,7 @@ Add Accessible.name and Accessible.role metadata to shared buttons, tabs, radio 
 
 ## Upstream evidence
 
+- https://github.com/amnezia-vpn/amnezia-client/issues/2778 — issue covering NVDA/TalkBack problems in core controls and split tunneling
 - https://github.com/amnezia-vpn/amnezia-client/pull/2779 — open, created 2026-06-27
 
 ## Boundary

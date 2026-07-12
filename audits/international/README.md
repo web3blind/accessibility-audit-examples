@@ -29,6 +29,7 @@
 | DevTrack — visible focus styles | Web app | https://github.com/Priyanshu-byte-coder/devtrack | [audit](web-devtrack-focus-visible/audit.md) | [summary](web-devtrack-focus-visible/summary.md) | [upstream](web-devtrack-focus-visible/pr-or-issue.md) |
 | Joplin website — keyboard focus indicator | Website / documentation site | https://github.com/laurent22/joplin | [audit](web-joplin-website-focus-indicator/audit.md) | [summary](web-joplin-website-focus-indicator/summary.md) | [upstream](web-joplin-website-focus-indicator/pr-or-issue.md) |
 | Personal Planner — icon-only control labels | Web app | https://github.com/TemaDeveloper/personal_planner | [audit](web-personal-planner-icon-labels/audit.md) | [summary](web-personal-planner-icon-labels/summary.md) | [upstream](web-personal-planner-icon-labels/pr-or-issue.md) |
+| PKP pkp-lib — FormHandler validation focus and error relationships | Web app framework / JavaScript form controller | https://github.com/pkp/pkp-lib | [audit](web-pkp-lib-formhandler-validation/audit.md) | [summary](web-pkp-lib-formhandler-validation/summary.md) | [upstream](web-pkp-lib-formhandler-validation/pr-or-issue.md) |
 | Nextcloud iOS — share extension folder picker | Mobile / iOS | https://github.com/nextcloud/ios | [audit](mobile-nextcloud-ios-folder-picker/audit.md) | [summary](mobile-nextcloud-ios-folder-picker/summary.md) | [upstream](mobile-nextcloud-ios-folder-picker/pr-or-issue.md) |
 
 ## Not included

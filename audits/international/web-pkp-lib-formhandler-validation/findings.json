@@ -1,0 +1,32 @@
+{
+  "case": "PKP pkp-lib — FormHandler validation focus and error relationships",
+  "type": "Web app framework / JavaScript form controller",
+  "target": "https://github.com/pkp/pkp-lib",
+  "collection": "international",
+  "findings": [
+    {
+      "title": "Form validation focus and error relationships",
+      "severity": "high",
+      "issue": "Failed submissions in shared PKP forms could leave keyboard and screen-reader users without a reliable programmatic path from an invalid control to its validation message.",
+      "fix": "Move focus to the first invalid control, add stable validation message ids, preserve and extend aria-describedby, manage aria-invalid only while invalid, and clean up managed state when controls become valid.",
+      "wcag": [
+        "2.4.3 Focus Order",
+        "3.3.1 Error Identification",
+        "3.3.3 Error Suggestion",
+        "4.1.2 Name, Role, Value"
+      ],
+      "source": [
+        "https://github.com/pkp/pkp-lib/pull/13031",
+        "https://github.com/pkp/pkp-lib/issues/12635",
+        "https://github.com/pkp/pkp-lib/issues/12599",
+        "https://github.com/pkp/pkp-lib/issues/12837"
+      ]
+    }
+  ],
+  "upstream": [
+    "https://github.com/pkp/pkp-lib/pull/13031",
+    "https://github.com/pkp/pkp-lib/issues/12635",
+    "https://github.com/pkp/pkp-lib/issues/12599",
+    "https://github.com/pkp/pkp-lib/issues/12837"
+  ]
+}
